@@ -1,0 +1,14 @@
+.header-area{
+    position: relative;
+  height: 300px;
+  background-image: linear-gradient(#FBD062, #FBD062);
+    height: 575px;
+    
+}
+svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 9vw;
+    
+  }
