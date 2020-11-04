@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import NavBar from '../Home/NavBar/NavBar';
-
+import Draggable from 'react-draggable';
 import { useForm } from 'react-hook-form';
 import './Tshirt.css'
 const Tshirt = () => {
@@ -17,9 +17,11 @@ const Tshirt = () => {
           <NavBar></NavBar>
 
            <div className='picc '>
-              <div >
-    { <h3 className='inputText'>{names.name}</h3> }
-              </div>
+              
+              <Draggable>
+            { <h2 className='inputText'>{names.name}</h2> }
+             
+              </Draggable>
           </div>
           
           <form onSubmit={handleSubmit(onSubmit)}>

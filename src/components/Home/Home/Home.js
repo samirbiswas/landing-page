@@ -18,6 +18,7 @@ const Home = () => {
             <AddImage></AddImage>
             <Contact></Contact>
            
+           
         </div>
     );
 };
