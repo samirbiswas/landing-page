@@ -17,12 +17,13 @@ const AddImage = () => {
 		}
 	};
 
+
 	const renderPhotos = (source) => {
 		console.log('source: ', source);
 		return source.map((photo) => {
-			return <div><img src={photo} alt="" key={photo} /> 
-                
-                <button > remove </button>
+			return <div className='photoss'><img src={photo} alt="" key={photo} /> 
+                <br/>
+				<button type="button" className="btn btn-danger ml-2">remove</button>
              </div> ;
 		});
 	};

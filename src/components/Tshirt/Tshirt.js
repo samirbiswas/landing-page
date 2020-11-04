@@ -1,28 +1,36 @@
 import React, { useState } from 'react';
 import NavBar from '../Home/NavBar/NavBar';
-import picture from '../../images/tshirt.jpg' 
+
+import { useForm } from 'react-hook-form';
+import './Tshirt.css'
 const Tshirt = () => {
-    const [newTodo, setNewTodo] = useState('')
-
-  const [todos, setTodos] = useState([]);
-
-  const addText = (a) => {
-    console.log(a)
     
+  const { register, handleSubmit } = useForm();
+
+  const [names ,setName] =useState({});
+  console.log(names)
+  const onSubmit = (data)=>{
+      setName(data)
   }
     return (
         <div className='container'>
-            <NavBar></NavBar>
-           <div className=''>
-           <img src={picture} class="img-fluid rounded mx-auto d-block" alt="Responsive image"/>
-           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Add Text" aria-label="Recipient's username" aria-describedby="button-addon2"/>
-            <div class="input-group-append">
-        <button class="btn btn-outline-secondary" onClick={addText} type="button" id="button-addon2">Button</button>
-  </div>
+          <NavBar></NavBar>
+
+           <div className='picc '>
+              <div >
+    { <h3 className='inputText'>{names.name}</h3> }
+              </div>
+          </div>
+          
+          <form onSubmit={handleSubmit(onSubmit)}>
+                    <input id="inputName" name="name" placeholder='add text' className="form-control" ref={register({ required: true })}/>
+                    <br/>
+                    
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                </form>
+        
 </div>
-           </div>
-        </div>
+           
     );
 };
 

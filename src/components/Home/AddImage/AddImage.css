@@ -48,7 +48,7 @@
     
   }
   
-  img{
+  .photoss img{
     width: 320px;
     height: 180px;
     object-fit: cover;
