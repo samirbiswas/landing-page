@@ -6,7 +6,10 @@ import {
   Route,
   
 } from "react-router-dom";
+
 import Tshirt from './components/Tshirt/Tshirt';
+
+
 
 function App() {
   return (
@@ -16,7 +19,7 @@ function App() {
       <Home></Home>
       </Route>
       <Route exact path='/tshirt'>
-      <Tshirt></Tshirt>
+     <Tshirt></Tshirt>
       </Route>
      </Switch>
    </Router>
